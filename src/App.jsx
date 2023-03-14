@@ -1,26 +1,19 @@
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Box, Flex, Spacer } from "@chakra-ui/react";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [highscore, setHighscore] = useState(0);
 
-  const increaseCount = () => {
-    setCount(count + 1);
-  };
-
-  const resetCount = () => {
-    setCount(0);
-  };
+  const [round, setRound] = useState(0);
 
   return (
-    <Box display="flex" h="100dvh" justifyContent="center">
-      <Text>{count}</Text>
-      <Button onClick={increaseCount}>Increase</Button>
-      <Button variant="outline" onClick={resetCount}>
-        Reset
-      </Button>
-    </Box>
+    <Flex direction="column" h="100dvh">
+      <Header score={highscore} round={round} />
+      <Spacer />
+      <Footer />
+    </Flex>
   );
 }
 
