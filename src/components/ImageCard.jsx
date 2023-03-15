@@ -1,17 +1,16 @@
 import React from "react";
-import { Card, Image, Box } from "@chakra-ui/react";
+import { Image, Box } from "@chakra-ui/react";
 
 function ImageCard({ imgSource }) {
   return (
-    <Box h="200px" w="150px">
-      <Card>
-        <Image
-          src={imgSource}
-          objectFit="cover"
-          alt="card image"
-          borderRadius={10}
-        />
-      </Card>
+    <Box w="150px" cursor="pointer">
+      <Image
+        src={imgSource}
+        objectFit="cover"
+        alt="Box image"
+        borderRadius={10}
+        // sx={{ filter: "blur(5px)" }}
+      />
     </Box>
   );
 }
