@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Flex, Box, StatGroup } from "@chakra-ui/react";
+import { Flex, StatGroup } from "@chakra-ui/react";
 import ImageCard from "./ImageCard.jsx";
 import GameStats from "./GameStats.jsx";
 
