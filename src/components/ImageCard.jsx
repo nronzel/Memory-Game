@@ -1,15 +1,18 @@
 import React from "react";
 import { Image, Box } from "@chakra-ui/react";
 
-function ImageCard({ imgSource }) {
+function ImageCard({ imgSource, onClick }) {
   return (
-    <Box w="150px" cursor="pointer">
+    <Box borderRadius="lg" cursor="pointer" as="button">
       <Image
         src={imgSource}
+        borderRadius="lg"
+        draggable="false"
+        selectable="false"
         objectFit="cover"
-        alt="Box image"
-        borderRadius={10}
-        // sx={{ filter: "blur(5px)" }}
+        onClick={onClick}
+        w="150px"
+        h="150px"
       />
     </Box>
   );
